@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
-import type { Project } from "@/lib/portfolio-data";
+import type { Project } from "@/lib/projects";
 
 export function ProjectCard({ project, index = 0 }: { project: Project; index?: number }) {
   return (

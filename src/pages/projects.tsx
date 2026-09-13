@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { projects } from "@/lib/portfolio-data";
+import { projects } from "@/lib/projects";
 import { ProjectCard } from "@/components/project-card";
 import { usePageMeta } from "@/lib/use-page-meta";
 

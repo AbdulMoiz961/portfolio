@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { skills } from "@/lib/portfolio-data";
+import { skills, about } from "@/lib/portfolio-data";
 import { usePageMeta } from "@/lib/use-page-meta";
 
 export default function About() {
@@ -24,39 +24,29 @@ export default function About() {
 
       <section className="grid gap-10 md:grid-cols-[1.4fr_1fr] md:gap-14">
         <div className="glass-card p-8 md:p-10">
-          <p className="text-lg leading-relaxed text-foreground">
-            Hello there — my name is Abdul Moiz. I'm a Computer Science student and front-end
-            developer who enjoys turning ideas into small, considered pieces of the web.
-          </p>
-          <p className="mt-4 leading-relaxed text-beige-muted">
-            I got into building for the web through curiosity: taking apart open-source projects,
-            reading other people's CSS, and slowly piecing together how things really work. Today I
-            focus on React and Next.js, with a soft spot for clean typography, thoughtful motion,
-            and interfaces that quietly get out of the way.
-          </p>
-          <p className="mt-4 leading-relaxed text-beige-muted">
-            Outside of code, I'm usually reading, tinkering with design tools, or exploring new
-            frameworks to keep my toolkit sharp.
-          </p>
+          <p className="text-lg leading-relaxed text-foreground">{about.lead}</p>
+          {about.body.map((para, i) => (
+            <p key={i} className="mt-4 leading-relaxed text-beige-muted">
+              {para}
+            </p>
+          ))}
 
           <div className="mt-8 grid grid-cols-2 gap-4 border-t border-white/5 pt-6 sm:grid-cols-3">
-            <Fact label="Focus" value="Front-end" />
-            <Fact label="Stack" value="React · Next.js" />
-            <Fact label="Based in" value="Pakistan" />
+            {about.facts.map((f) => (
+              <Fact key={f.label} label={f.label} value={f.value} />
+            ))}
           </div>
         </div>
 
         <aside className="glass-card p-8">
           <h2 className="font-display text-lg text-foreground">Education</h2>
           <ul className="mt-4 space-y-4 text-sm">
-            <li>
-              <p className="text-foreground">BS Computer Science</p>
-              <p className="text-beige-muted">University coursework in OOP, DSA, Machine Learning</p>
-            </li>
-            <li>
-              <p className="text-foreground">Self-directed</p>
-              <p className="text-beige-muted">Open-source, online courses, and personal projects</p>
-            </li>
+            {about.education.map((e) => (
+              <li key={e.title}>
+                <p className="text-foreground">{e.title}</p>
+                <p className="text-beige-muted">{e.detail}</p>
+              </li>
+            ))}
           </ul>
         </aside>
       </section>

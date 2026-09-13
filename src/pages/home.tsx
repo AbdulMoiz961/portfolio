@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { projects, skills } from "@/lib/portfolio-data";
+import { skills, hero } from "@/lib/portfolio-data";
+import { projects } from "@/lib/projects";
 import { ProjectCard } from "@/components/project-card";
 import { usePageMeta, defaultMeta } from "@/lib/use-page-meta";
 
@@ -22,7 +23,7 @@ export default function Home() {
           className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-beige-muted"
         >
           <Sparkles className="h-3 w-3 text-primary" />
-          Available for new projects
+          {hero.badge}
         </motion.div>
 
         <motion.h1
@@ -31,8 +32,9 @@ export default function Home() {
           transition={{ duration: 0.7, delay: 0.05, ease: "easeOut" }}
           className="mt-6 max-w-3xl font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl"
         >
-          Hello, I'm <span className="text-gradient">Abdul Moiz</span> — a front-end developer
-          crafting quiet, considered interfaces.
+          {hero.headingBefore}
+          <span className="text-gradient">{hero.headingName}</span>
+          {hero.headingAfter}
         </motion.h1>
 
         <motion.p
@@ -41,8 +43,7 @@ export default function Home() {
           transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
           className="mt-6 max-w-2xl text-base leading-relaxed text-beige-muted md:text-lg"
         >
-          I build responsive, accessible websites with React, Next.js and modern tooling. Currently
-          focused on portfolio and product sites that feel calm, precise and unmistakably crafted.
+          {hero.paragraph}
         </motion.p>
 
         <motion.div
@@ -123,11 +124,9 @@ export default function Home() {
         <div className="glass-card relative overflow-hidden p-8 md:p-12">
           <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary/25 blur-3xl" />
           <h3 className="max-w-xl font-display text-2xl text-foreground md:text-3xl">
-            Have a project in mind? Let's make it feel effortless.
+            {hero.ctaTitle}
           </h3>
-          <p className="mt-3 max-w-xl text-sm text-beige-muted">
-            I'm open to freelance work, collaborations, and full-time roles.
-          </p>
+          <p className="mt-3 max-w-xl text-sm text-beige-muted">{hero.ctaBody}</p>
           <Link
             to="/contact"
             className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:opacity-90"

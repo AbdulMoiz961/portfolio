@@ -8,11 +8,6 @@ import Python from "@/assets/Python_logo.svg";
 import GitGithub from "@/assets/GitGithub.svg";
 import WordPress from "@/assets/Wordpress.png";
 
-import NexGen from "@/assets/NexGen_Cybershield.png";
-import CodeSwift from "@/assets/CodeSwift.png";
-import BMApp from "@/assets/BM_App.png";
-import TodoApp from "@/assets/todo_app.png";
-
 export type Skill = {
   id: string;
   icon: string;
@@ -20,16 +15,10 @@ export type Skill = {
   content: string;
 };
 
-export type Project = {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  demo: string;
-  repository: string;
-};
-
+/**
+ * Skills are still defined here as code (they rarely change and share the card layout).
+ * PROJECTS moved to content/projects/*.md — see src/lib/projects.ts.
+ */
 export const skills: Skill[] = [
   {
     id: "skill-1",
@@ -96,49 +85,6 @@ export const skills: Skill[] = [
   },
 ];
 
-export const projects: Project[] = [
-  {
-    id: 0,
-    title: "NexGen CyberSecurity",
-    description:
-      "Designed a static website with a strong emphasis on front-end development, showcasing proficiency in React.js and CSS. The project highlights the layout and design of NexGen Cyber Shield, a fictional cybersecurity company.",
-    image: NexGen,
-    tags: ["JavaScript", "CSS", "React.js", "Node.js", "JSX"],
-    demo: "https://nexgen-cybershield.surge.sh",
-    repository: "https://github.com/AbdulMoiz961/Static-NexGen_Cybershield",
-  },
-  {
-    id: 1,
-    title: "Business Portfolio Website",
-    description:
-      "Designed and built a static Business Portfolio Website with a strong emphasis on front-end development, showcasing expertise in React.js, Next.js, and CSS. Demonstrated proficiency in React.js, and Next.js through innovative layout and design.",
-    image: CodeSwift,
-    tags: ["JavaScript", "Next.js", "CSS", "React.js", "Node.js"],
-    demo: "https://codeswift.vercel.app/",
-    repository: "https://github.com/AbdulMoiz961/Static-CodeSwift",
-  },
-  {
-    id: 2,
-    title: "Online Banking Website",
-    description:
-      "Developed a static website with a strong focus on front-end development, employing React.js and Tailwind CSS. The project highlights the engaging layout and design of a fictional Online Banking App, offering a seamless and intuitive user experience.",
-    image: BMApp,
-    tags: ["JavaScript", "Tailwind CSS", "React.js", "Node.js", "JSX"],
-    demo: "https://bm0-app0.surge.sh/",
-    repository: "https://github.com/AbdulMoiz961/Static-BM_App",
-  },
-  {
-    id: 3,
-    title: "TO-DO List App",
-    description:
-      "Developed a todo list web application utilizing React.js, JavaScript, and CSS. The project emphasizes efficient task management, enabling users to add, remove, and edit tasks with seamless accessibility. Tasks are stored locally, providing persistence across sessions for enhanced user experience.",
-    image: TodoApp,
-    tags: ["JavaScript", "CSS", "React.js", "Node.js"],
-    demo: "https://abdu1-moiz-tm.netlify.app/",
-    repository: "https://github.com/AbdulMoiz961/todo-list",
-  },
-];
-
 export const socials = {
   github: "https://github.com/AbdulMoiz961",
   linkedin: "https://www.linkedin.com/in/abdulmoiz961/",
@@ -154,4 +100,40 @@ export const siteMeta = {
   title: "Abdul Moiz — Front-end Developer & Web Designer",
   description:
     "Portfolio of Abdul Moiz — front-end developer working with React, Next.js and modern web tooling.",
+};
+
+/** Bio copy for the /about page — edit these strings directly. */
+export const about = {
+  lead: "Hello there — my name is Abdul Moiz. I'm a Computer Science student and front-end developer who enjoys turning ideas into small, considered pieces of the web.",
+  body: [
+    "I got into building for the web through curiosity: taking apart open-source projects, reading other people's CSS, and slowly piecing together how things really work. Today I focus on React and Next.js, with a soft spot for clean typography, thoughtful motion, and interfaces that quietly get out of the way.",
+    "Outside of code, I'm usually reading, tinkering with design tools, or exploring new frameworks to keep my toolkit sharp.",
+  ],
+  facts: [
+    { label: "Focus", value: "Front-end" },
+    { label: "Stack", value: "React · Next.js" },
+    { label: "Based in", value: "Pakistan" },
+  ],
+  education: [
+    {
+      title: "BS Computer Science",
+      detail: "University coursework in OOP, DSA, Machine Learning",
+    },
+    {
+      title: "Self-directed",
+      detail: "Open-source, online courses, and personal projects",
+    },
+  ],
+};
+
+/** Hero copy for the home page. */
+export const hero = {
+  badge: "Available for new projects",
+  headingBefore: "Hello, I'm ",
+  headingName: "Abdul Moiz",
+  headingAfter: " — a front-end developer crafting quiet, considered interfaces.",
+  paragraph:
+    "I build responsive, accessible websites with React, Next.js and modern tooling. Currently focused on portfolio and product sites that feel calm, precise and unmistakably crafted.",
+  ctaTitle: "Have a project in mind? Let's make it feel effortless.",
+  ctaBody: "I'm open to freelance work, collaborations, and full-time roles.",
 };
