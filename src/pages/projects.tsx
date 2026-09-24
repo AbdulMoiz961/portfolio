@@ -6,7 +6,7 @@ import { usePageMeta } from "@/lib/use-page-meta";
 export default function Projects() {
   usePageMeta(
     "Projects — Abdul Moiz",
-    "A selection of front-end projects by Abdul Moiz, from static marketing sites to small React apps.",
+    "Selected work by Abdul Moiz spanning machine learning systems, full-stack applications, and desktop tools.",
   );
 
   return (
@@ -22,8 +22,8 @@ export default function Projects() {
           Things I've <span className="text-gradient">built</span>.
         </h1>
         <p className="mt-4 text-beige-muted">
-          A small collection of front-end work — mostly React and Next.js — exploring layout,
-          motion, and clean visual systems.
+          Selected work spanning machine learning systems, full-stack applications, and desktop
+          tools.
         </p>
       </motion.header>
 

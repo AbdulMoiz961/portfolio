@@ -5,7 +5,7 @@ import { usePageMeta } from "@/lib/use-page-meta";
 export default function About() {
   usePageMeta(
     "About — Abdul Moiz",
-    "About Abdul Moiz — front-end developer, background, education, and the tools he works with day to day.",
+    "About Abdul Moiz — software developer, computer science graduate, background, education, and technical toolkit.",
   );
 
   return (

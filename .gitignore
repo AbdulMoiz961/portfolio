@@ -10,6 +10,10 @@ node_modules
 dist
 dist-ssr
 *.local
+*.tsbuildinfo
+
+# Raw assets
+Personal_Project_Screenshots/
 
 # Editor / OS
 .vscode/*

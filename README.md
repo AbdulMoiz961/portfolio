@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal portfolio site for **Abdul Moiz** — front-end developer & web designer.
+Personal portfolio site for **Abdul Moiz** — software developer & CS graduate.
 
 Static single-page app (Vite + React + TypeScript + Tailwind CSS v4 + framer-motion),
 hosted free on **GitHub Pages**.
@@ -10,7 +10,7 @@ images, bio text, and editing from your phone.
 
 ## Live
 
-**https://abdulmoiz961.github.io/portfolio/**
+**https://abdu1moiz.me/**
 
 Deploys automatically on every push to `main` via GitHub Actions (~1 minute).
 

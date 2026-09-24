@@ -3,10 +3,10 @@ import HTMLCSS from "@/assets/HTMLCSS.svg";
 import ReactLogo from "@/assets/React_logo.svg";
 import NodeJS from "@/assets/Node.js_logo.png";
 import WebDesignLogos from "@/assets/WebDesignLogos.svg";
-import Java from "@/assets/Java_logo.svg";
+import MLLogo from "@/assets/ML_logo.svg";
 import Python from "@/assets/Python_logo.svg";
 import GitGithub from "@/assets/GitGithub.svg";
-import WordPress from "@/assets/Wordpress.png";
+import Shopify from "@/assets/Shopify_logo.svg";
 
 export type Skill = {
   id: string;
@@ -16,124 +16,124 @@ export type Skill = {
 };
 
 /**
- * Skills are still defined here as code (they rarely change and share the card layout).
- * PROJECTS moved to content/projects/*.md — see src/lib/projects.ts.
+ * Skills are defined here as code (sharing the card layout).
+ * PROJECTS are located in content/projects/*.md — see src/lib/projects.ts.
  */
 export const skills: Skill[] = [
   {
     id: "skill-1",
-    icon: JavaScript,
-    title: "JavaScript",
+    icon: Python,
+    title: "Python",
     content:
-      "JavaScript, the second language I learned, sparked by fascination with open-source code. Developed proficiency, contributing to diverse projects and enhancing my skills.",
+      "Core language for machine learning and systems. Experience training deep learning models in PyTorch, developing FastAPI microservices, and crafting desktop software with PySide6.",
   },
   {
     id: "skill-2",
-    icon: HTMLCSS,
-    title: "HTML / CSS",
-    content:
-      "As I learned HTML/CSS through introductory courses, I applied this knowledge to craft various web projects, including the design of this site. This solidified my grasp of front-end development.",
-  },
-  {
-    id: "skill-3",
     icon: ReactLogo,
     title: "React",
     content:
-      "Explored React through online courses, applying it in several web projects, including this site and other frontend projects — showcasing my practical implementation of React skills.",
+      "Primary framework for client-side interfaces. Used to build typed single-page applications, diagnostic viewers, and responsive web experiences with modern React and state management.",
+  },
+  {
+    id: "skill-3",
+    icon: JavaScript,
+    title: "TypeScript / JS",
+    content:
+      "Applied across full-stack applications with strict static typing, shared contract definitions between client and server, and clean asynchronous workflows.",
   },
   {
     id: "skill-4",
     icon: NodeJS,
     title: "Node.js",
     content:
-      "As I learned JavaScript, I acquired proficiency in Node.js through hands-on projects and coursework. Examples of Node.js applications can be explored in my projects.",
+      "Foundation for backend services. Experience structuring REST APIs with Express, JWT authentication pipelines, and data persistence layers using MongoDB.",
   },
   {
     id: "skill-5",
-    icon: WebDesignLogos,
-    title: "Web Design",
+    icon: MLLogo,
+    title: "Machine Learning",
     content:
-      "Explored Figma and Adobe XD for web design, gaining experience in creating responsive UI/UX designs with these vector design tools.",
+      "Practical experience in computer vision and reinforcement learning—including fine-tuning Faster R-CNN on medical radiographs and policy optimization with PPO in Gymnasium.",
   },
   {
     id: "skill-6",
-    icon: Java,
-    title: "Java",
+    icon: HTMLCSS,
+    title: "HTML / CSS",
     content:
-      "Java forms the bedrock of my programming skills, acquired through essential university courses such as OOP and DSA, established the foundation for my understanding.",
+      "Solid understanding of semantic HTML5, accessible markup, modern layout techniques (Flexbox, Grid), and utility styling with Tailwind CSS.",
   },
   {
     id: "skill-7",
-    icon: Python,
-    title: "Python",
+    icon: Shopify,
+    title: "Shopify",
     content:
-      "Self-taught Python through books and videos, solidifying skills in a Machine Learning course in university. Applied Python knowledge to some personal projects.",
+      "Custom theme development on Online Store 2.0. Experience writing modular Liquid templates, JSON sections, and e-commerce UX tailored for conversion.",
   },
   {
     id: "skill-8",
-    icon: GitGithub,
-    title: "Git & GitHub",
+    icon: WebDesignLogos,
+    title: "Web Design",
     content:
-      "I've used Git for almost all of my projects, so I am very familiar with it. My proficiency extends to collaborative workflows on GitHub, where I try to contribute and participate in open-source projects.",
+      "Focus on layout balance, typography, and visual clarity. Experienced with Figma for wireframing, component structuring, and design systems.",
   },
   {
     id: "skill-9",
-    icon: WordPress,
-    title: "WordPress",
+    icon: GitGithub,
+    title: "Git & GitHub",
     content:
-      "Got myself into web development using the widely adopted CMS, WordPress. Gained proficiency through online courses, and applied skills in various projects.",
+      "Daily version control workflows, repository maintenance, structured commit histories, and deployment automation with GitHub Actions.",
   },
 ];
 
 export const socials = {
   github: "https://github.com/AbdulMoiz961",
-  linkedin: "https://www.linkedin.com/in/abdulmoiz961/",
-  email: "mailto:abdulmoiz961@gmail.com",
-  emailDisplay: "abdulmoiz961@gmail.com",
+  linkedin: "https://www.linkedin.com/in/abdul-moiz-b254b0343/",
+  email: "mailto:shabdulmoiz96@gmail.com",
+  emailDisplay: "shabdulmoiz96@gmail.com",
   githubDisplay: "@AbdulMoiz961",
-  linkedinDisplay: "in/abdulmoiz961",
+  linkedinDisplay: "in/abdul-moiz",
 };
 
 export const siteMeta = {
   name: "Abdul Moiz",
-  role: "Front-end Developer & Web Designer",
-  title: "Abdul Moiz — Front-end Developer & Web Designer",
+  role: "Software Developer & CS Graduate",
+  title: "Abdul Moiz — Software Developer & CS Graduate",
   description:
-    "Portfolio of Abdul Moiz — front-end developer working with React, Next.js and modern web tooling.",
+    "Portfolio of Abdul Moiz — software developer building full-stack applications, machine learning systems, and thoughtful web interfaces.",
 };
 
-/** Bio copy for the /about page — edit these strings directly. */
+/** Bio copy for the /about page. */
 export const about = {
-  lead: "Hello there — my name is Abdul Moiz. I'm a Computer Science student and front-end developer who enjoys turning ideas into small, considered pieces of the web.",
+  lead: "Hello — I'm Abdul Moiz. I'm a Computer Science graduate and software developer interested in building dependable systems, applied machine learning models, and carefully crafted interfaces.",
   body: [
-    "I got into building for the web through curiosity: taking apart open-source projects, reading other people's CSS, and slowly piecing together how things really work. Today I focus on React and Next.js, with a soft spot for clean typography, thoughtful motion, and interfaces that quietly get out of the way.",
-    "Outside of code, I'm usually reading, tinkering with design tools, or exploring new frameworks to keep my toolkit sharp.",
+    "My work spans different layers of the stack: from training deep learning models for medical radiograph analysis and developing reinforcement learning agents, to engineering full-stack MERN platforms and desktop tools for local businesses.",
+    "I value readable code, thoughtful data architecture, and software that solves real problems without unnecessary complexity. When I'm not writing code, I enjoy reading, exploring systems design, and learning about emerging technologies.",
   ],
   facts: [
-    { label: "Focus", value: "Front-end" },
-    { label: "Stack", value: "React · Next.js" },
+    { label: "Focus", value: "Full-Stack & ML" },
+    { label: "Stack", value: "React · Python · Node" },
     { label: "Based in", value: "Pakistan" },
   ],
   education: [
     {
       title: "BS Computer Science",
-      detail: "University coursework in OOP, DSA, Machine Learning",
+      detail: "Final Year Project: Dentalyze Care (Deep Learning / Faster R-CNN). Coursework in OOP, DSA, Machine Learning.",
     },
     {
-      title: "Self-directed",
-      detail: "Open-source, online courses, and personal projects",
+      title: "Self-Directed Engineering",
+      detail: "Hands-on projects across reinforcement learning, monorepo architectures, and e-commerce client work.",
     },
   ],
 };
 
 /** Hero copy for the home page. */
 export const hero = {
-  badge: "Available for new projects",
+  badge: "Available for opportunities",
   headingBefore: "Hello, I'm ",
   headingName: "Abdul Moiz",
-  headingAfter: " — a front-end developer crafting quiet, considered interfaces.",
+  headingAfter: " — a software developer building full-stack systems and ML applications.",
   paragraph:
-    "I build responsive, accessible websites with React, Next.js and modern tooling. Currently focused on portfolio and product sites that feel calm, precise and unmistakably crafted.",
-  ctaTitle: "Have a project in mind? Let's make it feel effortless.",
-  ctaBody: "I'm open to freelance work, collaborations, and full-time roles.",
+    "From deep learning models and full-stack web applications to client-facing desktop tools, I build software with clear architecture and steady attention to detail.",
+  ctaTitle: "Have a project or opportunity in mind?",
+  ctaBody: "Open to full-time engineering roles, freelance work, and technical collaborations.",
 };

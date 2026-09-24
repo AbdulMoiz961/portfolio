@@ -132,7 +132,7 @@ export function SiteFooter() {
   return (
     <footer className="mt-24 border-t border-white/5">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-beige-muted sm:flex-row">
-        <p>© {new Date().getFullYear()} {siteMeta.name}. Crafted with care.</p>
+        <p>© {new Date().getFullYear()} {siteMeta.name}.</p>
         <div className="flex items-center gap-4">
           <a
             href={socials.github}

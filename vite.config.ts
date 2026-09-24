@@ -3,9 +3,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import fs from "node:fs";
 import path from "node:path";
-
-// GitHub Pages project site → served from /portfolio/
-const REPO_NAME = "portfolio";
+import { fileURLToPath } from "node:url";
 
 /**
  * Validates every content/projects/*.md at build time.
@@ -102,16 +100,16 @@ function validateProjectContent(): Plugin {
   };
 }
 
-export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? `/${REPO_NAME}/` : "/",
+export default defineConfig({
+  base: "/",
   plugins: [react(), tailwindcss(), validateProjectContent()],
   resolve: {
     alias: {
-      "@": new URL("./src", import.meta.url).pathname,
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
   build: {
     outDir: "dist",
     sourcemap: false,
   },
-}));
+});

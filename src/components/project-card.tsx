@@ -39,22 +39,26 @@ export function ProjectCard({ project, index = 0 }: { project: Project; index?: 
           </div>
 
           <div className="flex flex-wrap gap-2 pt-1">
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs font-medium text-primary-foreground transition hover:opacity-90"
-            >
-              <ExternalLink className="h-3.5 w-3.5" /> View demo
-            </a>
-            <a
-              href={project.repository}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-beige transition hover:bg-white/10 hover:text-foreground"
-            >
-              <Github className="h-3.5 w-3.5" /> Repository
-            </a>
+            {project.demo ? (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs font-medium text-primary-foreground transition hover:opacity-90"
+              >
+                <ExternalLink className="h-3.5 w-3.5" /> View demo
+              </a>
+            ) : null}
+            {project.repository ? (
+              <a
+                href={project.repository}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-beige transition hover:bg-white/10 hover:text-foreground"
+              >
+                <Github className="h-3.5 w-3.5" /> Repository
+              </a>
+            ) : null}
           </div>
         </div>
       </div>
